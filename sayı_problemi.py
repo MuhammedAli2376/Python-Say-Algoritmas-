@@ -1,3 +1,4 @@
+#yorum satÄ±rÄ±
 import random
 dizi=[]
 for i in range(0,5):
@@ -5,144 +6,144 @@ for i in range(0,5):
 dizi.append(random.randrange(10,90,10))
 print(dizi)
 
-sayı=int(input("aranacak sayıyı giriniz:"))
-aranan_sayı=8
+sayÄ±=int(input("aranacak sayÄ±yÄ± giriniz:"))
+aranan_sayÄ±=8
 sayac=0
 t_dizi=[]
-ç_dizi=[]
+Ã§_dizi=[]
 c_dizi=[]
 g_dizi=[]
-çarpılmış_dizi=[]
-ç_t_dizi=[]
-t_sözlük={}
-ç_sözlük={}
-çarpılmış_sözlük={}
+Ã§arpÄ±lmÄ±ÅŸ_dizi=[]
+Ã§_t_dizi=[]
+t_sÃ¶zlÃ¼k={}
+Ã§_sÃ¶zlÃ¼k={}
+Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k={}
 def dizi_aktarma():
     for i in dizi:
         g_dizi.append(i)
 dizi_aktarma()
 g_dizi.pop()
-en_büyük=max(dizi)
+en_bÃ¼yÃ¼k=max(dizi)
 def toplama():
     for i in range(0,100):
         a=random.choice(g_dizi)
         b=random.choice(g_dizi)
         if a+b not in  t_dizi:
             t_dizi.append(a+b)
-            t_sözlük[a+b]=f"{a}+{b}"
-def çarpma():
+            t_sÃ¶zlÃ¼k[a+b]=f"{a}+{b}"
+def Ã§arpma():
     for i in range(0,100):
         a=random.choice(g_dizi)
         b=random.choice(g_dizi)
-        if a*b not in  ç_dizi:
-            ç_dizi.append(a*b)
-            ç_sözlük[a*b]=f"{a}*{b}"
-def cıkarma():
+        if a*b not in  Ã§_dizi:
+            Ã§_dizi.append(a*b)
+            Ã§_sÃ¶zlÃ¼k[a*b]=f"{a}*{b}"
+def cÄ±karma():
     for i in range(0,100):
         a=random.choice(g_dizi)
         b=random.choice(g_dizi)
         if a-b not in  c_dizi:
             c_dizi.append(a-b)
-def çarp():
+def Ã§arp():
     for i in range(0,100):
         a=random.choice(g_dizi)
-        if a*en_büyük not in  çarpılmış_dizi:
-            çarpılmış_dizi.append(a*en_büyük)
-            çarpılmış_sözlük[a*en_büyük]=f"{a}*{en_büyük}"
+        if a*en_bÃ¼yÃ¼k not in  Ã§arpÄ±lmÄ±ÅŸ_dizi:
+            Ã§arpÄ±lmÄ±ÅŸ_dizi.append(a*en_bÃ¼yÃ¼k)
+            Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[a*en_bÃ¼yÃ¼k]=f"{a}*{en_bÃ¼yÃ¼k}"
     for k in t_dizi:
-        if k*en_büyük not in ç_t_dizi:
-            ç_t_dizi.append(k*en_büyük)
-            çarpılmış_sözlük[a*en_büyük]=f"{a}*{en_büyük}"
-def cıkarma_işlemi(ç_sayı):
+        if k*en_bÃ¼yÃ¼k not in Ã§_t_dizi:
+            Ã§_t_dizi.append(k*en_bÃ¼yÃ¼k)
+            Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[a*en_bÃ¼yÃ¼k]=f"{a}*{en_bÃ¼yÃ¼k}"
+def cÄ±karma_iÅŸlemi(Ã§_sayÄ±):
     for j in t_dizi:
-        if ç_sayı-j==sayı:
-            print(ç_sayı-j)
-            if sayı+j in çarpılmış_dizi:
-                print(f"{çarpılmış_sözlük[sayı+j]}={sayı+j}")
-                print(f"{sayı+j}-{j}={sayı}")
-            return ç_sayı-j
-    for k in ç_dizi:
-        if ç_sayı-k==sayı:
-            print(f"{ç_sayı-j}={ç_sayı}")
-            if ç_sayı+j in çarpılmış_dizi:
-                print(f"{çarpılmış_sözlük[sayı+k]}={sayı+k}")
-                print(f"{sayı+k}-{k}={sayı}")
-            return ç_sayı-k
-def toplama_işlemi(t_sayı):
-    global sayı
+        if Ã§_sayÄ±-j==sayÄ±:
+            print(Ã§_sayÄ±-j)
+            if sayÄ±+j in Ã§arpÄ±lmÄ±ÅŸ_dizi:
+                print(f"{Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[sayÄ±+j]}={sayÄ±+j}")
+                print(f"{sayÄ±+j}-{j}={sayÄ±}")
+            return Ã§_sayÄ±-j
+    for k in Ã§_dizi:
+        if Ã§_sayÄ±-k==sayÄ±:
+            print(f"{Ã§_sayÄ±-j}={Ã§_sayÄ±}")
+            if Ã§_sayÄ±+j in Ã§arpÄ±lmÄ±ÅŸ_dizi:
+                print(f"{Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[sayÄ±+k]}={sayÄ±+k}")
+                print(f"{sayÄ±+k}-{k}={sayÄ±}")
+            return Ã§_sayÄ±-k
+def toplama_iÅŸlemi(t_sayÄ±):
+    global sayÄ±
     for j in t_dizi:
-        if j+t_sayı==sayı:
-            if sayı-j in çarpılmış_dizi:
-                print(f"{çarpılmış_sözlük[sayı-j]}={sayı-j}")
-                print(f"{sayı-j}+{j}={sayı}")
-            return j+t_sayı
-    for k in ç_dizi:
-        if k+t_sayı==sayı:
-            if sayı-k in çarpılmış_dizi:
-                print(f"{çarpılmış_sözlük[sayı-k]}={sayı-k}")
-                print(f"{sayı-k}+{k}={sayı}")
-            return k+t_sayı                          
+        if j+t_sayÄ±==sayÄ±:
+            if sayÄ±-j in Ã§arpÄ±lmÄ±ÅŸ_dizi:
+                print(f"{Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[sayÄ±-j]}={sayÄ±-j}")
+                print(f"{sayÄ±-j}+{j}={sayÄ±}")
+            return j+t_sayÄ±
+    for k in Ã§_dizi:
+        if k+t_sayÄ±==sayÄ±:
+            if sayÄ±-k in Ã§arpÄ±lmÄ±ÅŸ_dizi:
+                print(f"{Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[sayÄ±-k]}={sayÄ±-k}")
+                print(f"{sayÄ±-k}+{k}={sayÄ±}")
+            return k+t_sayÄ±                          
 def kontrol():
-    global aranan_sayı
+    global aranan_sayÄ±
     global sayac
-    if sayı in çarpılmış_dizi:
+    if sayÄ± in Ã§arpÄ±lmÄ±ÅŸ_dizi:
         print("1 defa")
         sayac=1000
-        print(f"{çarpılmış_sözlük[sayı]}")
-        aranan_sayı=sayı
+        print(f"{Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k[sayÄ±]}")
+        aranan_sayÄ±=sayÄ±
         return
-    elif sayı in ç_t_dizi:
+    elif sayÄ± in Ã§_t_dizi:
         print("2 defa")
         sayac=1000
-        aranan_sayı=sayı
+        aranan_sayÄ±=sayÄ±
         return
     else:
-        for i in çarpılmış_dizi:
-            if i>sayı:
-                if cıkarma_işlemi(i)==sayı:
-                    aranan_sayı=cıkarma_işlemi(i)
+        for i in Ã§arpÄ±lmÄ±ÅŸ_dizi:
+            if i>sayÄ±:
+                if cÄ±karma_iÅŸlemi(i)==sayÄ±:
+                    aranan_sayÄ±=cÄ±karma_iÅŸlemi(i)
                     sayac=1000
-                    print("içerde1")
+                    print("iÃ§erde1")
                     return
-            if sayı>i:
-                a=toplama_işlemi(i)
-                if a==sayı:
-                    aranan_sayı=a
-                    #asamalar(f"{sözlük[b]}={b}")
-                    #asamalar(f"{b}*{en_büyük}={b*en_büyük }") 
+            if sayÄ±>i:
+                a=toplama_iÅŸlemi(i)
+                if a==sayÄ±:
+                    aranan_sayÄ±=a
+                    #asamalar(f"{sÃ¶zlÃ¼k[b]}={b}")
+                    #asamalar(f"{b}*{en_bÃ¼yÃ¼k}={b*en_bÃ¼yÃ¼k }") 
                     sayac=1000
-                    print("içerde2")
+                    print("iÃ§erde2")
                     return
-        for i in ç_t_dizi:
-            if i>sayı:
-                if cıkarma_işlemi(i)==sayı:
-                    aranan_sayı=cıkarma_işlemi(i)
+        for i in Ã§_t_dizi:
+            if i>sayÄ±:
+                if cÄ±karma_iÅŸlemi(i)==sayÄ±:
+                    aranan_sayÄ±=cÄ±karma_iÅŸlemi(i)
                     sayac=1000
-                    print("içerde3")
+                    print("iÃ§erde3")
                     return
-            if sayı>i:
-                a=toplama_işlemi(i)
-                if a==sayı:
-                    aranan_sayı=a
-                    #asamalar(f"{sözlük[b]}={b}")
-                    #asamalar(f"{b}*{en_büyük}={b*en_büyük }") 
+            if sayÄ±>i:
+                a=toplama_iÅŸlemi(i)
+                if a==sayÄ±:
+                    aranan_sayÄ±=a
+                    #asamalar(f"{sÃ¶zlÃ¼k[b]}={b}")
+                    #asamalar(f"{b}*{en_bÃ¼yÃ¼k}={b*en_bÃ¼yÃ¼k }") 
                     sayac=1000   
-                    print("içerde4")
+                    print("iÃ§erde4")
                     return
         else:
-            if sayı in ç_t_dizi:
+            if sayÄ± in Ã§_t_dizi:
                 sayac=1000
-                aranan_sayı=sayı
+                aranan_sayÄ±=sayÄ±
                 return
             for i in t_dizi:
-                if i*en_büyük>sayı:
-                    a=cıkarma_işlemi(i*en_büyük)
-                if sayı>i*en_büyük :
-                    a=toplama_işlemi(i*en_büyük)
-                elif a==sayı:
-                    asamalar(f"{sözlük[i]}={i}")
-                    asamalar(f"{i}*{en_büyük}={i*en_büyük }") 
-                    aranan_sayı=a
+                if i*en_bÃ¼yÃ¼k>sayÄ±:
+                    a=cÄ±karma_iÅŸlemi(i*en_bÃ¼yÃ¼k)
+                if sayÄ±>i*en_bÃ¼yÃ¼k :
+                    a=toplama_iÅŸlemi(i*en_bÃ¼yÃ¼k)
+                elif a==sayÄ±:
+                    asamalar(f"{sÃ¶zlÃ¼k[i]}={i}")
+                    asamalar(f"{i}*{en_bÃ¼yÃ¼k}={i*en_bÃ¼yÃ¼k }") 
+                    aranan_sayÄ±=a
                     sayac=1000
                     return
 al_d=[]
@@ -160,19 +161,19 @@ def ana():
         sayac=sayac+1
         
 toplama()
-çarpma()
-cıkarma()
-çarp()
+Ã§arpma()
+cÄ±karma()
+Ã§arp()
 ana()
-if(aranan_sayı==8):
-    print("sayı bulunamadı")
+if(aranan_sayÄ±==8):
+    print("sayÄ± bulunamadÄ±")
 else:
-    print(f"bulunan sayı:{aranan_sayı}")
-#print(t_sözlük)
-#print(ç_sözlük)
-#print(çarpılmış_sözlük)
+    print(f"bulunan sayÄ±:{aranan_sayÄ±}")
+#print(t_sÃ¶zlÃ¼k)
+#print(Ã§_sÃ¶zlÃ¼k)
+#print(Ã§arpÄ±lmÄ±ÅŸ_sÃ¶zlÃ¼k)
 print(f"toplama {t_dizi}")
-print(f"çarpma dizi {ç_dizi}")
-print(f"cıkarma dizi {c_dizi}")
-print(f"çarpılmış_dizi: {çarpılmış_dizi}")
-print(f"c_t_dizi{ç_t_dizi}")
+print(f"Ã§arpma dizi {Ã§_dizi}")
+print(f"cÄ±karma dizi {c_dizi}")
+print(f"Ã§arpÄ±lmÄ±ÅŸ_dizi: {Ã§arpÄ±lmÄ±ÅŸ_dizi}")
+print(f"c_t_dizi{Ã§_t_dizi}")
